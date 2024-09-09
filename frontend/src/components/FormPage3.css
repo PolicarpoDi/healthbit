@@ -1,0 +1,69 @@
+/* Contêiner geral do formulário */
+.form-container {
+  max-width: 800px; /* Aumenta a largura máxima do formulário */
+  margin: 0 auto; /* Centraliza o formulário */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Adiciona uma sombra suave ao redor do formulário */
+  border-radius: 8px; /* Adiciona bordas arredondadas ao formulário */
+  background-color: #fff; /* Fundo branco para o formulário */
+}
+
+/* Ajusta os grupos de formulário */
+.form-group {
+  margin-bottom: 15px; /* Espaçamento entre os grupos de formulário */
+}
+
+/* Estilo para os rótulos */
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold; /* Rótulos em negrito */
+  font-size: 0.9em; /* Diminui o tamanho da fonte dos rótulos */
+}
+
+/* Estilo para os checkboxes */
+.form-group div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+/* Estilo para os checkboxes e labels */
+.form-group input[type="checkbox"] {
+  margin-right: 10px; /* Espaçamento à direita dos checkboxes */
+}
+
+.form-group label {
+  font-weight: normal; /* Remove o negrito dos labels dos checkboxes */
+  font-size: 0.9em; /* Tamanho da fonte dos labels dos checkboxes */
+}
+
+/* Estilo para os botões de navegação */
+.form-buttons {
+  margin-top: 20px; /* Espaçamento acima dos botões */
+  display: flex;
+  gap: 50px; /* Espaçamento entre os botões */
+}
+
+/* Estilo para os botões de navegação */
+.form-buttons button {
+  padding: 10px 20px; /* Espaçamento interno do botão */
+  border: none; /* Remove a borda padrão do botão */
+  border-radius: 4px; /* Adiciona bordas arredondadas ao botão */
+  background-color: #007bff; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  font-size: 0.9em; /* Tamanho da fonte do botão */
+  cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+}
+
+/* Estilo para o botão ao passar o mouse */
+.form-buttons button:hover {
+  background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Estilo para a mensagem de erro */
+.error-text {
+  color: red; /* Cor vermelha para a mensagem de erro */
+  font-size: 0.9em; /* Tamanho da fonte da mensagem de erro */
+  margin-top: 10px; /* Espaçamento acima da mensagem de erro */
+}

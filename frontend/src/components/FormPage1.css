@@ -1,0 +1,124 @@
+/* Contêiner geral do formulário */
+.form-container {
+  max-width: 600px; /* Limita a largura do formulário */
+  margin: 0 auto; /* Centraliza o formulário */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Adiciona uma sombra suave ao redor do formulário */
+  border-radius: 8px; /* Adiciona bordas arredondadas ao formulário */
+  background-color: #fff; /* Fundo branco para o formulário */
+}
+
+/* Ajusta os grupos de formulário */
+.form-group {
+  margin-bottom: 15px; /* Espaçamento entre os grupos de formulário */
+}
+
+/* Estilo para os rótulos */
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold; /* Rótulos em negrito */
+}
+
+.form-group-sub label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Alinha o título da página */
+h2 {
+  text-align: center; /* Centraliza o título */
+  margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+/* Estilo para os campos de entrada de texto e comboboxes */
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="email"],
+.form-group select {
+  width: 100%; /* Ajusta a largura dos campos para ocupar todo o espaço disponível */
+  padding: 10px; /* Adiciona espaçamento interno aos campos */
+  border: 1px solid #ddd; /* Adiciona uma borda leve aos campos */
+  border-radius: 4px; /* Adiciona bordas arredondadas aos campos */
+  box-sizing: border-box; /* Inclui o padding e a borda na largura total do campo */
+}
+
+/* Ajusta o tamanho dos comboboxes para a data de nascimento */
+.date-controls select {
+  width: 80px; /* Ajusta a largura dos comboboxes */
+  margin-right: 5px; /* Espaçamento entre os comboboxes */
+}
+
+/* Estilo do input de data para ocultá-lo */
+.date-picker {
+  display: none; /* Oculta o input de data nativo */
+}
+
+/* Estilo para mensagens de erro */
+.error-text {
+  color: red; /* Cor do texto de erro */
+  font-size: 0.875em; /* Tamanho da fonte do texto de erro */
+  margin-top: 5px; /* Espaçamento acima do texto de erro */
+}
+
+/* Estilo para o botão de navegação */
+.form-group button {
+  padding: 10px 20px; /* Espaçamento interno do botão */
+  border: none; /* Remove a borda padrão do botão */
+  border-radius: 4px; /* Adiciona bordas arredondadas ao botão */
+  background-color: #007bff; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  font-size: 1em; /* Tamanho da fonte do botão */
+  cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+}
+
+/* Estilo para o botão ao passar o mouse */
+.form-group button:hover {
+  background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Estilo para botões de rádio, um abaixo do outro */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo para o quadro de pressão arterial */
+.pressao-arial-container {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f4f4f4;
+}
+
+/* Estilo para o título da pressão arterial com linha de destaque */
+.pressao-arial-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-bottom: 10px; /* Espaçamento abaixo do título */
+  border-bottom: 3px solid #007bff; /* Linha de destaque abaixo do título */
+}
+
+/* Estilo para o subtítulo da pressão arterial */
+.pressao-arial-subtitle {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Estilo para os comboboxes */
+.pressao-arial-select {
+  width: calc(50% - 10px); /* Ajusta a largura dos comboboxes */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 20px; /* Espaçamento entre os comboboxes */
+}
+
+/* Estilo para o checkbox */
+.pressao-arial-checkbox {
+  display: flex;
+  align-items: center;
+}
