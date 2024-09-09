@@ -1,9 +1,7 @@
 import axios from 'axios';
 
-// Pega a URL do backend a partir do .env
 const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
-// Função para buscar os dados de alimentação da Página 3
 export const getAlimentacao = async () => {
   try {
     const response = await axios.get(`${backendUrl}/getAlimentacao`);
@@ -14,7 +12,6 @@ export const getAlimentacao = async () => {
   }
 };
 
-// Função para submeter o formulário completo
 export const submitFormulario = async (formData) => {
   try {
     const response = await axios.post(`${backendUrl}/submitFormulario`, formData);

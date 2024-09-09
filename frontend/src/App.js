@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import FormPage1 from './components/FormPage1';
 import FormPage2 from './components/FormPage2';
-import FormPage3 from './components/FormPage3'; // Adicionando Página 3
-import FormSummary from './components/FormSummary'; // Para o resumo do formulário
-import { submitFormulario } from './api';  // Função para submeter o formulário
+import FormPage3 from './components/FormPage3'; 
+import FormSummary from './components/FormSummary';
+import { submitFormulario } from './api'; 
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -23,9 +23,9 @@ const App = () => {
     altura: '',
     pressaoSistolica: '',
     pressaoDiastolica: '',
-    opcoesSelecionadas: [], // Página 2
-    tipoAlimentacao: '',     // Página 3
-    alimentosSelecionados: [] // Página 3
+    opcoesSelecionadas: [], 
+    tipoAlimentacao: '',     
+    alimentosSelecionados: [] 
   });
 
   const nextPage = () => {
@@ -40,7 +40,7 @@ const App = () => {
     try {
       await submitFormulario(formData);
       console.log('Formulário submetido com sucesso!');
-      setCurrentPage(1); // Reinicia o formulário após submissão bem-sucedida
+      setCurrentPage(1);
     } catch (error) {
       console.error('Erro ao submeter o formulário:', error);
     }

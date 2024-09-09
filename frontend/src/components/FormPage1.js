@@ -31,7 +31,6 @@ const FormPage1 = ({ formData, setFormData, nextPage }) => {
     if (!formData.peso || isNaN(formData.peso)) newErrors.peso = "Peso é obrigatório e deve ser um número.";
     if (!formData.altura || isNaN(formData.altura)) newErrors.altura = "Altura é obrigatória e deve ser um número.";
 
-    // Se "Os dados estão corretos?" for "Não", o usuário não pode avançar
     if (formData.dadosCorretos === "não") newErrors.dadosCorretos = "Não é possível prosseguir sem que os dados estejam corretos.";
 
     setErrors(newErrors);
@@ -39,14 +38,12 @@ const FormPage1 = ({ formData, setFormData, nextPage }) => {
   };
   console.log(errors)
 
-  // Chama a função de validação e avança para a próxima página se não houver erros
   const handleNext = () => {
     if (validatePage1()) {
       nextPage();
     }
   };
 
-  // Função para atualizar a data de nascimento
   const handleDateChange = (event) => {
     const { name, value } = event.target;
     setFormData({
@@ -62,7 +59,6 @@ const FormPage1 = ({ formData, setFormData, nextPage }) => {
     <div className="form-container">
       <h2>Página 1</h2>
 
-      {/* Campo Nome */}
       <div className="form-group">
         <label>Nome</label>
         <input
@@ -73,7 +69,6 @@ const FormPage1 = ({ formData, setFormData, nextPage }) => {
         {errors.nome && <p className="error-text">{errors.nome}</p>}
       </div>
 
-      {/* Campo Matrícula/CPF */}
       <div className="form-group">
         <label>Matrícula/CPF:</label>
         <input
@@ -84,7 +79,6 @@ const FormPage1 = ({ formData, setFormData, nextPage }) => {
         {errors.matriculaCpf && <p className="error-text">{errors.matriculaCpf}</p>}
       </div>
 
-      {/* Campo Cargo */}
       <div className="form-group">
         <label>Cargo</label>
         <input
@@ -95,7 +89,6 @@ const FormPage1 = ({ formData, setFormData, nextPage }) => {
         {errors.cargo && <p className="error-text">{errors.cargo}</p>}
       </div>
 
-      {/* Campo Cidade */}
       <div className="form-group">
         <label>Cidade</label>
         <input
@@ -106,7 +99,6 @@ const FormPage1 = ({ formData, setFormData, nextPage }) => {
         {errors.cidade && <p className="error-text">{errors.cidade}</p>}
       </div>
 
-      {/* Campo Estado */}
       <div className="form-group">
         <label>Estado</label>
         <select
@@ -121,7 +113,6 @@ const FormPage1 = ({ formData, setFormData, nextPage }) => {
         {errors.estado && <p className="error-text">{errors.estado}</p>}
       </div>
 
-      {/* Campo Dados Corretos */}
       <div className="form-group-sub">
         <label><b>Os dados acima estão corretos?</b></label>
         <div className='radio-group'>
@@ -149,7 +140,6 @@ const FormPage1 = ({ formData, setFormData, nextPage }) => {
         {errors.dadosCorretos && <p className="error-text">{errors.dadosCorretos}</p>}
       </div>
 
-      {/* Campo Titularidade */}
       <div className="form-group-sub">
         <label><b>Titularidade</b></label>
         <div className='radio-group'>
@@ -177,7 +167,6 @@ const FormPage1 = ({ formData, setFormData, nextPage }) => {
         {errors.titularidade && <p className="error-text">{errors.titularidade}</p>}
       </div>
 
-      {/* Campo Telefone */}
       <div className="form-group">
         <label>Telefone com DDD</label>
         <input
@@ -188,7 +177,6 @@ const FormPage1 = ({ formData, setFormData, nextPage }) => {
         {errors.telefone && <p className="error-text">{errors.telefone}</p>}
       </div>
 
-      {/* Campo Email */}
       <div className="form-group">
         <label>E-mail:</label>
         <input
@@ -199,7 +187,6 @@ const FormPage1 = ({ formData, setFormData, nextPage }) => {
         {errors.email && <p className="error-text">{errors.email}</p>}
       </div>
 
-      {/* Campo Data de Nascimento */}
       <div className="form-group">
         <label>Data de Nascimento:</label>
         <div className="date-controls">
@@ -236,7 +223,6 @@ const FormPage1 = ({ formData, setFormData, nextPage }) => {
         </div>
       </div>
 
-      {/* Campo Sexo */}
       <div className="form-group-sub">
         <label><b>Sexo Biológico</b></label>
         <div className='radio-group'>
@@ -263,7 +249,6 @@ const FormPage1 = ({ formData, setFormData, nextPage }) => {
         </div>
       </div>
 
-      {/* Campo Peso */}
       <div className="form-group">
         <label>Peso</label>
         <input
@@ -274,7 +259,6 @@ const FormPage1 = ({ formData, setFormData, nextPage }) => {
         {errors.peso && <p className="error-text">{errors.peso}</p>}
       </div>
 
-      {/* Campo Altura */}
       <div className="form-group">
         <label>Altura (em cm)</label>
         <input
@@ -285,7 +269,6 @@ const FormPage1 = ({ formData, setFormData, nextPage }) => {
         {errors.altura && <p className="error-text">{errors.altura}</p>}
       </div>
 
-      {/* Seção de Pressão Arterial */}
       <div className="pressao-arial-container">
         <div className="pressao-arial-title">Pressão Arterial</div>
         <div className="pressao-arial-subtitle">

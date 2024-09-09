@@ -7,15 +7,14 @@ const FormPage3 = ({ formData, setFormData, previousPage, handleSubmit }) => {
   const [selectedTipo, setSelectedTipo] = useState('');
   const [errors, setErrors] = useState({});
 
-  // Função para buscar dados de alimentação
   useEffect(() => {
     const fetchAlimentacao = async () => {
       try {
         const response = await getAlimentacao();
-        // Ajuste o formato dos dados conforme necessário
+
         setAlimentacaoOptions({
-          tipoAlimentacao: Object.keys(response), // Obtendo os tipos de alimentação a partir das chaves do objeto
-          alimentos: response // Dados dos alimentos
+          tipoAlimentacao: Object.keys(response), 
+          alimentos: response 
         });
       } catch (error) {
         console.error("Erro ao buscar dados de alimentação:", error);
@@ -24,20 +23,17 @@ const FormPage3 = ({ formData, setFormData, previousPage, handleSubmit }) => {
     fetchAlimentacao();
   }, []);
 
-  // Manipula a mudança no dropdown do tipo de alimentação
   const handleTypeChange = (event) => {
     const tipoSelecionado = event.target.value;
     setSelectedTipo(tipoSelecionado);
 
-    // Atualiza o estado com o tipo de alimentação selecionado
     setFormData(prevData => ({
       ...prevData,
       tipoAlimentacao: tipoSelecionado,
-      alimentosSelecionados: [] // Limpa as seleções quando o tipo de alimentação muda
+      alimentosSelecionados: [] 
     }));
   };
 
-  // Manipula a mudança nos checkboxes dos alimentos
   const handleFoodChange = (food) => {
     setFormData(prevData => {
       const newSelections = prevData.alimentosSelecionados.includes(food)
@@ -47,7 +43,6 @@ const FormPage3 = ({ formData, setFormData, previousPage, handleSubmit }) => {
     });
   };
 
-  // Validação para a página 3
   const validatePage3 = () => {
     let newErrors = {};
     if (!formData.tipoAlimentacao) newErrors.tipoAlimentacao = "Tipo de Alimentação é obrigatório.";
@@ -58,7 +53,7 @@ const FormPage3 = ({ formData, setFormData, previousPage, handleSubmit }) => {
 
   const handleNext = () => {
     if (validatePage3()) {
-      handleSubmit(); // Submete o formulário na última página
+      handleSubmit(); 
     }
   };
 
@@ -66,7 +61,6 @@ const FormPage3 = ({ formData, setFormData, previousPage, handleSubmit }) => {
     <div className="form-container">
       <h2>Página 3</h2>
 
-      {/* Dropdown para selecionar Tipo de Alimentação */}
       <div className="form-group">
         <label><b>Selecione seu tipo de Alimentação</b></label>
         <select
